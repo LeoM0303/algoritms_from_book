@@ -1,9 +1,6 @@
-from django.db.models.fields import return_None
-
-
-def binary_search(list, item):
+def binary_search(lst, item):
     low = 0
-    high = len(list)
+    high = len(lst) - 1
 
     while low <= high:
         mid = (low + high) // 2
@@ -18,5 +15,5 @@ def binary_search(list, item):
 
 my_list = [1,3,5,7,9]
 
-print binary_search(my_list, 3)
-print binary_search(my_list, -1)
+print(binary_search(my_list, 3))
+print(binary_search(my_list, -1))
